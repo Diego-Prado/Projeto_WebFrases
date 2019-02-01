@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMestre.master.cs" Inherits="WebFrases.PaginaMestre" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Sistema em implantação </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+             <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/imagens/sistema/topocurso.png" PostBackUrl="~/Default.aspx" CssClass="linkhome" />
+	        <nav>
+		        <h1>Desenvolvimento em fase de testes</h1>
+               <div id="cssmenu">
+                   <asp:HyperLink ID="hlHome" runat="server" CssClass="linkBotoes" NavigateUrl="~/default.aspx">Home</asp:HyperLink>
+                <asp:HyperLink ID="hlUsuario" runat="server" CssClass="linkBotoes" NavigateUrl="#">Usuários</asp:HyperLink>
+                <asp:HyperLink ID="hlAutor" runat="server" CssClass="linkBotoes" NavigateUrl="#">Autores</asp:HyperLink>
+                <asp:HyperLink ID="h1Frase" runat="server" CssClass="linkBotoes" NavigateUrl="#">Frases</asp:HyperLink>
+                <asp:HyperLink ID="h1Categoria" runat="server" CssClass="linkBotoes" NavigateUrl="~/categoria.aspx">Categorias</asp:HyperLink>
+               </div>
+                <asp:HyperLink ID="hlSair" runat="server" CssClass="linkBotoes" NavigateUrl="#">Sair</asp:HyperLink>
+	        </nav>	 
+        </header>
+        
+        <main>
+            <article>
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                </article>
+        </main>
+        
+        <footer>
+            <p align="center">Desenvolvido por Diego Prado</p>
+        </footer>
+    </form>
+</body>
+</html>
